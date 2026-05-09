@@ -1,273 +1,445 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Pawar | Mechanical Engineering Portfolio</title>
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f8fafc;
-    color:#0f172a;
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-/* Navbar */
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-nav{
-    position:sticky;
-    top:0;
-    background:white;
-    padding:1rem 2rem;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    z-index:100;
-}
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
 
-.nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    max-width:1200px;
-    margin:auto;
-}
+<body>
 
-.logo{
-    font-size:1.5rem;
-    font-weight:bold;
-    color:#2563eb;
-}
+<!-- Navbar -->
+<nav>
 
-.nav-links{
-    display:flex;
-    gap:2rem;
-}
+    <div class="nav-container">
 
-.nav-links a{
-    text-decoration:none;
-    color:#111827;
-    font-weight:600;
-}
+        <div class="logo">Omkar Pawar</div>
 
-.nav-links a:hover{
-    color:#2563eb;
-}
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#skills">Skills</a>
+            <a href="#activities">Activities</a>
+            <a href="#contact">Contact</a>
+        </div>
 
-/* Container */
+    </div>
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:2rem;
-}
+</nav>
 
-/* Hero */
+<!-- Main -->
+<main class="container" id="home">
 
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:2rem;
-    padding:3rem;
-    background:white;
-    border-radius:25px;
-    margin-bottom:3rem;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
 
-.hero-content{
-    flex:1;
-}
+        <div class="hero-content">
 
-.hero-badge{
-    display:inline-block;
-    background:#dbeafe;
-    color:#1d4ed8;
-    padding:0.5rem 1rem;
-    border-radius:30px;
-    font-size:0.9rem;
-    margin-bottom:1rem;
-}
+            <span class="hero-badge">
+                <i class="fas fa-cogs"></i>
+                Mechanical Engineering Student
+            </span>
 
-.hero-content h1{
-    font-size:3rem;
-    margin-bottom:1rem;
-}
+            <h1>Omkar Pawar</h1>
 
-.hero-content p{
-    margin-bottom:1rem;
-    line-height:1.6;
-}
+            <p>
+                <i class="fas fa-university"></i>
+                MIT Academy of Engineering (MITAOE)
+            </p>
 
-.hero-avatar{
-    font-size:8rem;
-    color:#2563eb;
-}
+            <p>
+                Passionate Mechanical Engineering student skilled in
+                AutoCAD, Fusion 360, Python, C language and engineering design.
+                Interested in automation, CAD modelling and innovative projects.
+            </p>
 
-/* Buttons */
+            <div class="btn-group">
 
-.btn-group{
-    display:flex;
-    gap:1rem;
-    margin-top:1.5rem;
-}
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Contact Me
+                </a>
 
-.btn{
-    padding:0.8rem 1.5rem;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-    border:none;
-    cursor:pointer;
-}
+                <a href="#education" class="btn btn-outline">
+                    <i class="fas fa-graduation-cap"></i>
+                    View Academics
+                </a>
 
-.btn-primary{
-    background:#2563eb;
-    color:white;
-}
+            </div>
 
-.btn-primary:hover{
-    background:#1d4ed8;
-}
+        </div>
 
-.btn-outline{
-    border:2px solid #2563eb;
-    color:#2563eb;
-}
+        <div class="hero-avatar">
+            <i class="fas fa-user-astronaut"></i>
+        </div>
 
-.btn-outline:hover{
-    background:#2563eb;
-    color:white;
-}
+    </section>
 
-/* Sections */
+    <!-- Education -->
+    <section id="education">
 
-.section-title{
-    font-size:2rem;
-    margin-bottom:2rem;
-    color:#111827;
-}
+        <h2 class="section-title">
+            <i class="fas fa-graduation-cap"></i>
+            Academic Journey
+        </h2>
 
-/* Grid */
+        <div class="grid-2cols">
 
-.grid-2cols{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:2rem;
-}
+            <div class="card">
 
-/* Cards */
+                <div class="card-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
 
-.card{
-    background:white;
-    padding:2rem;
-    border-radius:20px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
+                <h3>B.Tech Mechanical Engineering</h3>
 
-.card:hover{
-    transform:translateY(-5px);
-}
+                <p>
+                    <strong>MITAOE</strong><br>
+                    First Year Engineering
+                </p>
 
-.card-icon{
-    font-size:2.5rem;
-    color:#2563eb;
-    margin-bottom:1rem;
-}
+                <div class="progress-bar">
 
-/* Badges */
+                    <div class="progress-label">
+                        <span>Semester 1 SGPA</span>
+                        <span>7.6</span>
+                    </div>
 
-.badge-list{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:1rem;
-}
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width:76%;"></div>
+                    </div>
 
-.badge{
-    background:#dbeafe;
-    color:#1d4ed8;
-    padding:0.4rem 1rem;
-    border-radius:30px;
-    font-size:0.8rem;
-}
+                </div>
 
-/* Progress */
+            </div>
 
-.progress-bar{
-    margin-top:1rem;
-}
+            <div class="card">
 
-.progress-label{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:5px;
-}
+                <div class="card-icon">
+                    <i class="fas fa-school"></i>
+                </div>
 
-.progress-track{
-    width:100%;
-    height:10px;
-    background:#e5e7eb;
-    border-radius:20px;
-}
+                <h3>HSC - 12th</h3>
 
-.progress-fill{
-    height:100%;
-    background:#2563eb;
-    border-radius:20px;
-}
+                <p><strong>65%</strong> | HSC Board</p>
 
-/* Contact */
+                <div class="progress-bar">
 
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:1rem;
-}
+                    <div class="progress-label">
+                        <span>HSC Score</span>
+                        <span>65%</span>
+                    </div>
 
-.contact-row{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    background:#f1f5f9;
-    padding:1rem;
-    border-radius:10px;
-}
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width:65%;"></div>
+                    </div>
 
-/* Form */
+                </div>
 
-form input,
-form textarea{
-    width:100%;
-    padding:1rem;
-    margin-bottom:1rem;
-    border-radius:10px;
-    border:1px solid #cbd5e1;
-}
+                <hr><br>
 
-/* Footer */
+                <h3>SSC - 10th</h3>
 
-footer{
-    margin-top:3rem;
-    text-align:center;
-    padding:2rem;
-    background:#0f172a;
-    color:white;
-}
+                <p><strong>80%</strong> | SSC Board</p>
 
-/* Responsive */
+                <div class="progress-bar">
 
-@media(max-width:768px){
+                    <div class="progress-label">
+                        <span>SSC Score</span>
+                        <span>80%</span>
+                    </div>
 
-    .hero{
-        text-align:center;
-    }
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width:80%;"></div>
+                    </div>
 
-    .hero-content h1{
-        font-size:2rem;
-    }
+                </div>
 
-    .nav-links{
-        gap:1rem;
-    }
-}
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+
+        <h2 class="section-title">
+            <i class="fas fa-certificate"></i>
+            Certifications
+        </h2>
+
+        <div class="grid-2cols">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+
+                <h3>Python Essentials</h3>
+
+                <p>
+                    Certified in Python programming fundamentals including
+                    loops, functions, problem solving and automation basics.
+                </p>
+
+                <div class="badge-list">
+                    <span class="badge">Python</span>
+                    <span class="badge">Programming</span>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+
+                <h3>Career Management Essentials</h3>
+
+                <p>
+                    Learned communication skills, resume building,
+                    teamwork and professional workplace ethics.
+                </p>
+
+                <div class="badge-list">
+                    <span class="badge">Soft Skills</span>
+                    <span class="badge">Leadership</span>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+
+                <h3>Autodesk Fusion 360</h3>
+
+                <p>
+                    Skilled in 3D modelling, assemblies, rendering
+                    and CAD design using Fusion 360 software.
+                </p>
+
+                <div class="badge-list">
+                    <span class="badge">CAD</span>
+                    <span class="badge">3D Modelling</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            <i class="fas fa-tools"></i>
+            Technical Skills
+        </h2>
+
+        <div class="grid-2cols">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+
+                <h3>CAD Designing</h3>
+
+                <p>
+                    Skilled in AutoCAD, Fusion 360 and Recap Pro
+                    for drafting and mechanical design.
+                </p>
+
+                <div class="badge-list">
+                    <span class="badge">AutoCAD</span>
+                    <span class="badge">Fusion 360</span>
+                    <span class="badge">Recap Pro</span>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <h3>Programming</h3>
+
+                <p>
+                    Knowledge of Python and C language
+                    for engineering and automation projects.
+                </p>
+
+                <div class="badge-list">
+                    <span class="badge">Python</span>
+                    <span class="badge">C Language</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Beyond Academics -->
+    <section id="activities">
+
+        <h2 class="section-title">
+            <i class="fas fa-star"></i>
+            Beyond Academics
+        </h2>
+
+        <div class="grid-2cols">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <h3>Projects & Interests</h3>
+
+                <ul class="list">
+
+                    <li>Mechanical CAD Design Projects</li>
+                    <li>3D Modelling using Fusion 360</li>
+                    <li>Python Mini Projects</li>
+                    <li>Automation & Engineering Innovation</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-futbol"></i>
+                </div>
+
+                <h3>Extracurricular Activities</h3>
+
+                <p>
+                    Active participant in technical events,
+                    engineering activities and teamwork-based projects.
+                    Interested in robotics, innovation and practical learning.
+                </p>
+
+                <div class="badge-list">
+
+                    <span class="badge">Teamwork</span>
+                    <span class="badge">Leadership</span>
+                    <span class="badge">Innovation</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">
+            <i class="fas fa-address-card"></i>
+            Contact Me
+        </h2>
+
+        <div class="grid-2cols">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+
+                <h3>Contact Details</h3>
+
+                <div class="contact-info">
+
+                    <div class="contact-row">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>8177917177</span>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <span>yourmail@gmail.com</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+
+                <h3>Quick Message</h3>
+
+                <form>
+
+                    <input type="text" placeholder="Your Name">
+
+                    <input type="email" placeholder="Your Email">
+
+                    <textarea rows="4" placeholder="Write message"></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 Omkar Pawar | Mechanical Engineering Portfolio
+    </p>
+
+</footer>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: false
+    });
+</script>
+
+</body>
+</html>
